@@ -3,14 +3,7 @@
 }
 
 @font-face {
-  font-family: opensans-bold;
-  src: url(../fonts/OpenSans-Bold.ttf), url(../fonts/OpenSans-Bold.woff), url(../fonts/OpenSans-Bold.woff2);
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: opensans-regular;
+  font-family: opensans;
   src: url(../fonts/OpenSans-Regular.ttf), url(../fonts/OpenSans-Regular.woff), url(../fonts/OpenSans-Regular.woff2);
   font-weight: 400;
   font-style: normal;
@@ -88,7 +81,8 @@ ul {
   margin-right: auto;
   text-align: center;
   text-transform: uppercase;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
   position: relative;
   z-index: 999;
   font-size: 45px;
@@ -101,7 +95,7 @@ ul {
   height: 41px;
 }
 
-.menu-list-item:nth-child(n + 2) {
+.part-menu {
   margin-left: 32px;
 }
 
@@ -115,7 +109,7 @@ ul {
   text-decoration: none;
   color: #ded2e4;
   font-size: 13px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -140,10 +134,10 @@ ul {
   margin: 0;
   margin-bottom: 40px;
   position: relative;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
   font-size: 20px;
   color: #0f0d0e;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .trend {
@@ -180,7 +174,8 @@ ul {
   padding-top: 10px;
   color: #ffffff;
   font-size: 20px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .section-title {
@@ -230,16 +225,17 @@ ul {
   padding-top: 60px;
 }
 
-.main {
-  flex: 1;
-  margin-right: 110px;
-}
+/* .main { */
+/* flex: 1; */
+/* margin-right: 110px; */
+
+
 
 .post {
   display: flex;
 }
 
-.category-item:nth-child(n+2) {
+.part-category {
   margin-left: 16px;
 }
 
@@ -248,7 +244,8 @@ ul {
   list-style-type: none;
   text-transform: uppercase;
   color: #b59f5b;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .category-item:hover {
@@ -258,7 +255,8 @@ ul {
 .article-title {
   text-transform: uppercase;
   color: #0f0d0e;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
   margin: 0;
   padding-top: 13px;
   padding-bottom: 30px;
@@ -276,13 +274,14 @@ ul {
 
 time {
   color: #888888;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .article-author {
   font-style: normal;
   margin-left: 15px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 p {
@@ -290,13 +289,15 @@ p {
   margin-bottom: 0;
   color: #0f0d0e;
   font-size: 15px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+
 }
 
 /* sidebar */
 
 .sidebar {
-  width: 25%;
+  width: 40%;
+  margin-left: 115px;
 }
 
 .last-post {
@@ -315,10 +316,7 @@ p {
   flex: 1;
 }
 
-.last-posts>h2,
-.subscribe>h2,
-.tags>h2,
-.categories>h2 {
+.title-sidebar-one {
   text-transform: uppercase;
   text-align: center;
   justify-content: center;
@@ -327,21 +325,30 @@ p {
   margin-bottom: 40px;
   position: relative;
   font-size: 14px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
-.last-posts>h2:nth-child(n+2),
-.subscribe>h2,
-.tags>h2,
-.categories>h2 {
+.title-sidebar {
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 14px;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.title-sidebar {
   margin-top: 56px;
 }
 
-.last-posts>h2::after,
-.subscribe>h2::after,
-.tags>h2::after,
-.categories>h2::after,
-.section-title::after {
+.title-sidebar::after,
+.section-title::after,
+.title-sidebar-one::after {
   content: "";
   display: block;
   width: 50px;
@@ -354,14 +361,15 @@ p {
   opacity: 0.40;
 }
 
-.post-content>h3 {
+.content-title {
   text-transform: uppercase;
   margin: 0;
   font-size: 14px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
-.post-content>h3:hover {
+.content-title:hover {
   color: #b59f5b;
 }
 
@@ -382,7 +390,7 @@ p {
   background-color: #f4f7f6;
   border: none;
   font-size: 13px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .field:focus {
@@ -427,7 +435,7 @@ p {
   background-color: #f4f7f6;
   border: none;
   font-size: 13px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .field-email:focus {
@@ -444,7 +452,8 @@ p {
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .submit:hover {
@@ -459,7 +468,8 @@ p {
   text-align: center;
   color: #0f0d0e;
   font-size: 12px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .tag {
@@ -469,7 +479,7 @@ p {
   padding: 8px 11px;
 }
 
-.tag-item:nth-child(n+4) {
+.part-tag {
   margin-top: 6px;
 }
 
@@ -490,14 +500,15 @@ p {
 .categories-link {
   text-decoration: none;
   font-size: 14px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .categories-list {
   list-style-type: none;
 }
 
-sup {
+.rating {
   padding-left: 5px;
   font-size: 12px;
 }
@@ -546,14 +557,15 @@ sup {
   color: #0f0d0e;
   text-transform: uppercase;
   font-size: 20px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .shop-information {
   margin-bottom: 25px;
   margin-top: 10px;
   font-size: 15px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .shop-description:hover {
@@ -568,13 +580,15 @@ sup {
   font-size: 14px;
   text-decoration: line-through;
   color: #0f0d0e;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .shop-price {
   font-size: 20px;
   color: #0f0d0e;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .shop-button {
@@ -585,7 +599,8 @@ sup {
   background-color: #b59f5b;
   border: none;
   color: #ffffff;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .shop-button:hover {
@@ -652,14 +667,15 @@ sup {
 .info-sait {
   text-align: center;
   font-size: 12px;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .socials {
   padding: 35px 0px;
 }
 
-.socials-item:nth-of-type(n+2) {
+.part-socials {
   margin-left: 30px;
 }
 
@@ -669,6 +685,7 @@ sup {
 
   .post-thumb {
     margin-right: 25px;
+    width: 90%;
   }
 
   .hamb,
@@ -685,7 +702,7 @@ sup {
     width: 24.625%;
   }
 
-  .trend:nth-of-type(n+2) {
+  .part-trend {
     margin-left: 0.5%;
   }
 
@@ -693,7 +710,7 @@ sup {
     margin-bottom: 55px;
   }
 
-  .shop:nth-child(2) {
+  .part-shop {
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -1002,6 +1019,12 @@ sup {
     padding-right: 15px;
   }
 
+  .container-menu {
+    display: block;
+  }
+
+
+
   .header {
     background-image: url(../images/banner-mobile.jpg);
     background-repeat: no-repeat;
@@ -1182,7 +1205,7 @@ sup {
   display: block;
   font-size: 13px;
   margin-bottom: 12px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .field-input {
@@ -1196,7 +1219,7 @@ sup {
   height: 120px;
   background-color: #f4f7f6;
   color: a9acab;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .form-group {
@@ -1211,21 +1234,22 @@ sup {
   background-color: #b59f5b;
   border: none;
   color: #ffffff;
-  font-family: opensans-bold, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .agree {
   margin-left: 20px;
   position: relative;
   font-size: 13px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .desagree {
   margin-left: 20px;
   position: relative;
   font-size: 13px;
-  font-family: opensans-regular, Arial, sans-serif;
+  font-family: opensans, Arial, sans-serif;
 }
 
 .agree::before {
@@ -1237,6 +1261,8 @@ sup {
   position: absolute;
   width: 15px;
   height: 15px;
+  left: -18px;
+  top: 0;
 }
 
 .desagree::before {
